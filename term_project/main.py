@@ -188,7 +188,6 @@ if __name__ == '__main__':
     parser.add_argument('--dpath', '--d', default='./dataset/CUB_200_2011/CUB_200_2011', type=str,
                         help='the path where dataset is located')
     parser.add_argument('--restore_ckpt', type=str, help="restore checkpoint")
-    parser.add_argument('--state', '--s', default='train', type=str, help='train , val, test state')
     parser.add_argument('--nway', '--n', default=5, type=int, help='number of class in the support set (5 or 20)')
     parser.add_argument('--kshot', '--k', default=5, type=int,
                         help='number of data in each class in the support set (1 or 5)')
