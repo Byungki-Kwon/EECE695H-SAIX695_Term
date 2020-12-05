@@ -1,7 +1,7 @@
 import torch
 
 
-def squrare_euclidean_metric(a, b):
+def square_euclidean_metric(a, b):
     """ Measure the euclidean distance (optional)
     Args:
         a : torch.tensor, features of data query

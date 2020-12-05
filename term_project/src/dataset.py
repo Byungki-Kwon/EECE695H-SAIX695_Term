@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 class CUB(Dataset):
     def __init__(self, root, state=None, data_len=None):
         """
-            Note that CUB has 200 classes, but we only use 180 classes in the training step
-            Validation and test are conducted in the remaining 20 classes
+            Note that CUB has 200 classes, but we only use 100 classes in the training step
+            Validation is conducted in the remaining 50 classes
 
             *** Never change the data loader init, len part ***
             *** getitem part can be changed for data augmentation ***
-            *** Never include the 20 remaining classes in the training step. It is considered cheating. ***
+            *** Never include the remaining classes in the training step. It is considered cheating. ***
 
         """
         if state is None:
@@ -29,14 +29,14 @@ class CUB(Dataset):
 
         for line in img_txt_file:
             img_name_list.append(line[:-1].split(' ')[-1])
-        train_img_name_list = img_name_list[:10602]
-        val_img_name_list = img_name_list[10602:11071]
+        train_img_name_list = img_name_list[:5804]
+        val_img_name_list = img_name_list[5804:8822]
 
         label_list = []
         for line in label_txt_file:
             label_list.append(int(line[:-1].split(' ')[-1]) - 1)
-        train_label_list = label_list[:10602]
-        val_label_list = label_list[10602:11071]
+        train_label_list = label_list[:5804]
+        val_label_list = label_list[5804:8822]
 
         if self.state == 'train':
             self._imgs = [plt.imread(os.path.join(self.root, 'images', f))
