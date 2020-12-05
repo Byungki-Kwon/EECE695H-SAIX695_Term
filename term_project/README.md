@@ -8,7 +8,7 @@ You will need to download the datasets yourself from http://www.vision.caltech.e
 Default dataset location is "./dataset". You can change the --dpath default values as you want.
 
 To load pretrained model, run:
-> python main.py --restore_ckpt "./checkpoints/model_name.pth"
+> python main.py --restore_ckpt ./checkpoints/model_name.pth
 
 Do not change nway, kshot, query numbers! 
 
