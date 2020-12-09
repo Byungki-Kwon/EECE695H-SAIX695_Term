@@ -57,6 +57,10 @@ class CUB(Dataset):
             *** getitem part can be changed for data augmentation ***
 
         """
+        
+        """ TODO 1.c (optional) """
+        " Implement data augmentation techniques for few-shot learning task (optional) "
+        
         img, target = self._imgs[index], self._labels[index]
 
         # convert grayscale images into RGB images
