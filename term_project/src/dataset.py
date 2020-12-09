@@ -73,7 +73,9 @@ class CUB(Dataset):
         img = transforms.RandomHorizontalFlip()(img)
         img = transforms.ToTensor()(img)
         img = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(img)
-
+        
+        """ TODO 1.c (optional) END """
+        
         return img, target
 
     def __len__(self):
